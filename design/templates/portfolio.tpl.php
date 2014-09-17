@@ -5,7 +5,7 @@
 
 
 //// /////////////////////////// get json des references /////////////////////////// /////////////////////////// /////////////////////////// 
-$.getJSON("./json/refs.json",function(result){
+$.getJSON("./json/results.json",function(result){
     var noeux = 0;
     $.each(result.references, function(i, field){     
 noeux++;
