@@ -33,20 +33,17 @@ LoadBar.prototype.show = function() {
 LoadBar.prototype.hide = function() {
      
      
-        $('#loadingSms').fadeOut(function () {
-         $('#infoLoading').fadeOut(function  () {
+        $('#infoLoading').fadeOut(function () {
+         $('#loadingSms').fadeOut(function  () {
              $('#trame2').fadeOut(600);
-             $('#bgLoading').fadeOut(1000, function () { $('#loadingZone').fadeOut(600); });
+             $('#bgLoading').fadeOut(1000, function () { $('#loadingZone').fadeOut(600); $('#all').fadeIn();});
          }); 
         });
         
+
         
-        /* Random BG */
-        var numberRandom=  Math.floor(Math.random()*8);
-        if (numberRandom===0) { numberRandom=1; }
-         $('#bgIntro').css('background','url(../img/bg/bg-intro'+numberRandom+'.jpg) no-repeat center center fixed');
-     console.log(numberRandom);
-        
+         $('#bgIntro').css('background','url(../img/bg/bgPaulEx.png) repeat center center fixed');
+    
 };
  
 
@@ -88,7 +85,7 @@ LoadBar.prototype.locate = function(){
 //Set the value position of the bar (Only 0-100 values are allowed)
 LoadBar.prototype.setValue = function(value){
 	if(value >= 0 && value <= 100){
-		document.getElementById("progressBar").style.width = value + "%";
+//		document.getElementById("progressBar").style.width = value + "%";
 		/*document.getElementById("infoProgress").innerHTML = parseInt(value) + "%";*/
 	}
 };
@@ -160,18 +157,8 @@ window.onresize = function(){
 start = function(){
             
 	
-	myBar.addImage("bg/bg-intro1.jpg");
-        myBar.addImage("bg/bg-intro2.jpg");
-        myBar.addImage("bg/bg-intro3.jpg");
-        myBar.addImage("bg/bg-intro4.jpg");
-        myBar.addImage("bg/bg-intro5.jpg");
-        myBar.addImage("bg/bg-intro6.jpg");
-        myBar.addImage("bg/bg-intro7.jpg");
-        myBar.addImage("bgVideo.png");
-        myBar.addImage("bgOeuvres.png");
-        myBar.addImage("bgExpos.png");
-        
-      
+	myBar.addImage("bg/bgPaulEx.png");
+    
 	myBar.run();
 };
 //Called on click reset button
