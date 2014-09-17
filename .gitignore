@@ -16,4 +16,5 @@
 *.sublime*
 nbproject/private/
 *.massi
-logs/*.txt
+logs/*
+!logs/.gitkeep
