@@ -22,14 +22,14 @@ if (!empty($_GET['action'])) {
 
 	} else {
 
-		include 'controllers/intro.php';
+		include 'controllers/portfolio.php';
 	}
 
     } 
 
 } else {
 
-	include 'controllers/intro.php';
+	include 'controllers/portfolio.php';
 }
 
 $contenu = ob_get_clean();

@@ -30,7 +30,27 @@ $encode = json_encode($posts[0]);
 
 //fputs($fp, $encode);
 fwrite($fp, $encode."\r\n", strlen($encode));
-fclose($fp);      
+fclose($fp);
 }
+
+include CHEMIN_LIB.'Db.class.php';
+
+$db = new Db();
+
+$db->bind("type","references");
+$references = $db->query("SELECT * FROM `cadres` AS c 
+	LEFT JOIN `references` AS r 
+	ON  c.id=r.id
+	WHERE c.type = :type");
+
+
+// $fp = fopen('json/results.json', 'w');
+
+// $encode = json_encode($posts[0]);
+
+
+// //fputs($fp, $encode);
+// fwrite($fp, $encode."\r\n", strlen($encode));
+// fclose($fp);
 
 ?>
