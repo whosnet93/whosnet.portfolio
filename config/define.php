@@ -6,6 +6,8 @@ define('CHEMIN_CONTROLLERS',    'appli/');
 define('CHEMIN_MODELS',    'appli/models/');
 define('CHEMIN_VIEWS',    'appli/views/');
 define('CHEMIN_LOGS',    'logs/');
+define('CHEMIN_DESIGN',    'design/');
+define('CHEMIN_TEMPLATES', 'design/templates/');
 
 
 define('PATH_JS','http://'.$_SERVER['SERVER_NAME'].'/action/datas/js/');
