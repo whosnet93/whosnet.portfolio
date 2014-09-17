@@ -30,4 +30,3 @@ $encode = json_encode($result);
 fwrite($fp, $encode."\r\n", strlen($encode));
 fclose($fp);
 
-?>

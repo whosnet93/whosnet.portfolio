@@ -38,6 +38,3 @@ include 'config/header.php';
 echo $contenu;
 
 include 'config/footer.php'; 
-
-
-$pdo = null;
