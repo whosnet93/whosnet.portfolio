@@ -16,4 +16,4 @@
 *.sublime*
 nbproject/private/
 *.massi
-logs/*
+logs/*.txt
