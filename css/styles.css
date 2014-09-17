@@ -10,7 +10,8 @@ body{
 	font-size:0.825em;
 	background: #ffffff;
 	font-family: 'Open Sans', sans-serif;
-        overflow: hidden;
+    
+        height: 100%;
 }
 
 html {height:100%;
@@ -283,7 +284,7 @@ div.tutInfo{
 }
 
 @font-face {
-	font-family: 'LetterGothicStd';
+	font-family: 'Open Sans', sans-serif;
 	src: url('fonts/LetterGothicStd.eot?') format('eot'), 
 	     url('fonts/LetterGothicStd.otf')  format('opentype'),
 	     url('fonts/LetterGothicStd.woff') format('woff'), 
@@ -292,11 +293,8 @@ div.tutInfo{
 }
 
 #bgIntro {
-background: url(../img/bg/bg-intro1.jpg) no-repeat center center fixed; 
--webkit-background-size: cover!important;
--moz-background-size: cover !important;
--o-background-size: cover !important;
-background-size: cover !important;
+background: url(../img/bg/bgPaulEx.png) repeat center center fixed; 
+
 position: fixed;
     width: 100%;
     height: 100%;
@@ -305,76 +303,34 @@ position: fixed;
     z-index: 1;
   
     
-    -khtml-opacity:0.35;
+/*    -khtml-opacity:0.35;
 -moz-opacity : 0.35;
 -ms-filter: "alpha(opacity=35)";
 filter: progid:DXImageTransform.Microsoft.Alpha(opacity=35);
 filter : alpha(opacity=35);
-opacity : 0.35;
+opacity : 0.35;*/
 }
 
 #trame { 
-    background: url(../img/trame.png) repeat;
+    background: url(../img/bg/trame.png) repeat;
 position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 2;
-}
-
-#trame2 { 
-    background: url(../img/trame2.png) repeat;
-position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 999999999;
+    z-index: 0;
 }
 
 
-#txtIntro { 
-    position: absolute;
-    width:700px; 
-    height: 220px;
-    z-index: 3;
-    left: 0;
-    top: 0;
-    background: transparent;
-    color: black;
-    top:35%;
-    left:50%;
-    margin-left:-348px;
-    margin-top: -24px;
-}
 
-#txtIntro h2 { 
-border-bottom: 1px solid #000000;
-border-top: 1px solid #000000;
-font-family: 'LetterGothicStd';
-font-weight: normal;
-margin-top: 11px;
-padding-bottom: 10px;
-padding-top: 16px;
-text-align: center;
-text-transform: uppercase;
-margin-bottom: 11px;
-}
 
-#txtIntro p {
-font-family: 'Open Sans', sans-serif;
-font-style: italic;
-font-size: 14px;
-text-align: justify;
-}
 
 
 #startBut {
   background: none repeat scroll 0 0 #000000;
     color: #FFFFFF;
     float: right;
-    font-family: 'LetterGothicStd';
+    font-family: 'Open Sans', sans-serif;
     font-size: 9px;
     font-weight: bold;
     height: 24px;
@@ -408,11 +364,7 @@ footer {
        
    }
    
-   #son {
-       padding-right: 20px;
-       color: black;
-       float:right;
-   }
+
    
 /*/////////////LOADER //////////////////*/
 #bgLoading {
@@ -428,16 +380,15 @@ footer {
 display:none;
 }
 #loadingZone{
-    position: absolute;
-    width:700px; 
-    height: 220px;
-    z-index: 3;
-    background: transparent;
-    color: black;
-    top:35%;
-    left:50%;
-    margin-left:-348px;
-    margin-top: -24px;
+background: none repeat scroll 0 0 transparent;
+color: black;
+height: 220px;
+margin: -110px auto auto;
+position: relative;
+text-align: center;
+top: 50%;
+width: 325px;
+z-index: 3;
 }
 #loadingBar{
 height:10px;
@@ -452,26 +403,27 @@ height:10px;
 line-height:0;
 margin:0;
 padding:0;
-background:#ff4a36;
+background:#e3e3e3;
 width:0%;
+
 
 }
 #loadingSms{
 color:#b9b9b9;
 /*float:left;*/
 padding:10px 2px;
-font-family: 'LetterGothicStd'; font-size: 10px; text-transform: uppercase; font-weight: bold;
+font-family: 'Open Sans', sans-serif; font-size: 40px; text-transform: uppercase; font-weight: bold;
 }
 #infoProgress{
 color:#b9b9b9;
 text-align: center;
 padding:10px 2px;
-font-family: 'LetterGothicStd'; font-size: 40px;
+font-family: 'Open Sans', sans-serif; font-size: 40px;
 }
 #infoLoading{
 padding:10px;
 color:#b9b9b9;
-font-family: 'LetterGothicStd'; font-size: 9px;
+font-family: 'Open Sans', sans-serif; font-size: 9px;
 }
 
 #loadingBarStripe {
@@ -489,276 +441,6 @@ font-family: 'LetterGothicStd'; font-size: 9px;
 
     color:#b9b9b9;
     font-size: 40px;
-}
-
-
-/*
- -khtml-opacity:0.1;
--moz-opacity : 0.1;
--ms-filter: "alpha(opacity=10)";
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);
-filter : alpha(opacity=10);
-opacity : 0.1;*/
- 
-#oeuvres, #expos, #videos { 
-    width:calc(100% / 3 ); 
-    position: fixed;
-    height: 100%;
-    top:0;
-    z-index: 1;
-        -khtml-opacity:0.35;
--moz-opacity : 0.35;
--ms-filter: "alpha(opacity=35)";
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=35);
-filter : alpha(opacity=35);
-opacity : 0.35;
-}
-
-#oeuvres{  
-    left:calc(100% / 3 - 100% / 3);
-    background: url('../img/bgOeuvres.png') repeat;
-    -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;}
-#expos{ 
-    left:calc(100% / 3 ); 
-        background: url('../img/bgExpos.png') repeat ;
-        -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-#videos{ 
-    left:calc(100% / 3 + 100% / 3); 
-    background: url('../img/bgVideo.png') repeat ;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-
-
-
-#annees {
-overflow: hidden;
-list-style-type: none;
-margin: auto;
-padding: 0;
-}
-
-#annees  li{
-cursor: pointer;
-float: left;
-margin-right: 20px;
-width: 50px;
-position: relative;
-top: 35px;
-}
-
-#timeline {
-background: none repeat scroll 0 0 #FFFFFF;
-bottom: 70px;
-height: 2px;
-position: fixed;
-width: 1%;
-z-index: 10;
-line-height: 30px;
-overflow: hidden; 
-display:none;
-}
-
-#tooltips{
-bottom: 100px;
-height: 58px;
-position: fixed;
-width: 100%;}
-
-.tooltipAnnees { 
-background: none repeat scroll 0 0 #232323;
-display: none;
-height: 20px;
-left: -11px;
-position: relative;
-top: -66px;
-width: 84px;
-
-}
-
-.tooltipAnneesArr { 
-background: none repeat scroll 0 0 #232323;
-height: 20px;
-left: 7px;
-position: relative;
-top: 4px;
-width: 20px;
-z-index: 9;
-transform:rotate(45deg);
--ms-transform:rotate(45deg); /* IE 9 */
--webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
-
-}
-
-.compteEvent {
-color: #FFFFFF;
-font-size: 10px;
-left: 9px;
-position: relative;
-top: -26px;
-z-index: 11;
-}
-
-#anneesMois {
-  
-list-style-type: none;
-margin: auto;
-padding: 0;
-
-}
-
-#anneesMois  li{
- float: left;
-    margin-right: 20px;
-    width: 80px;
-    position: relative;
-        text-align:center;
-        top:30px;
-
-}
-
-.tooltipMois { 
-background: none repeat scroll 0 0 #232323;
-display: none;
-height: 20px;
-left: -11px;
-position: relative;
-top: -66px;
-width: 84px;
-}
-
-.tooltipMoisArr { 
-background: none repeat scroll 0 0 #232323;
-height: 20px;
-left: 7px;
-position: relative;
-top: 4px;
-width: 20px;
-z-index: 9;
-transform:rotate(45deg);
--ms-transform:rotate(45deg); /* IE 9 */
--webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
-}
-
-#cercle {
-background: none repeat scroll 0 0 #232323;
--webkit-border-radius: 50%;
-border-radius: 50%;
-height: 1px;
-left: 0;
-position: absolute;
-top: 0;
-width: 1px;
-z-index: 11;
-display:none;
-margin-left: 50%;
-margin-top: 25%;
-
-}
-
-#tooltips {
-height: 58px;
-margin: auto;
-position: relative;
-top: -20px;
-}
-
-#tooltips li{
-cursor: pointer;
-float: left;
-position: relative;
-top: 35px;
-width: 85px;
-z-index: 12;
-display: none;
-}
-
-
-#timelineToolT {
-bottom: 118px;
-height: 33px;
-line-height: 30px;
-position: fixed;
-width: 100%;
-z-index: 10;
-}
-
-#temps {background: none repeat scroll 0 0 #232323;
-bottom: 116px;
-height: 0px;
-width: 0px;
-position: fixed;
-
-z-index: 10;
-}
-
-.eventPlace { 
-border-left: 1px dashed #3F3F3F;
-border-right: 1px dashed #3F3F3F;
-float: left;
-height: 0px;
-margin-right: -1px;
-position: relative;
-text-align: center;
-top: 0;
-width: 98px;
-}
-
-#evenements {
-margin: auto;
-position: relative;
-list-style-type: none;
-padding: 0;
-}
-
-.iconEvent {
-display: none;
-float: left;
-margin-left: 13px;
-margin-right: 8px;
-margin-top: 7px;
-cursor: pointer;
-}
-
-.eventPlace span {
-color: #444444;
-font-size: 10px;
-position: relative;
-text-decoration: none;
-top: 10px;
-display:none;
-float:left;
-}
-
-#retour { 
-background: none repeat scroll 0 0 #232323;
-border-radius: 50%;
-bottom:160px;
-height: 50px;
-left: 50%;
-margin-left: -25px;
-position: fixed;
-width: 50px;
-z-index: 10;
-display: none;
-cursor: pointer;
-
-}
-
-#retour img{
-cursor: pointer;
-left: 11px;
-position: relative;
-top: 11px;
 }
 
 #prev {
@@ -782,4 +464,102 @@ position: fixed;
 width: 29px;
 z-index: 11;
 display: none;
+    }
+    
+#sliderWhosnet {
+background: none repeat scroll 0 0 #505050;
+height: 315px;
+overflow: hidden;
+width: 100%;
+}      
+    
+#sliderContent{
+height: 350px;
+list-style: none outside none;
+overflow: hidden;
+position: relative;
+    
+    }
+    
+       #all {
+display: none;
+height: 525px;
+margin: -262px auto auto;
+position: relative;
+top: 50%;
+width: 940px;
+z-index: 2;
+    }
+    
+    #main {height: 100%;}
+    
+    #activityContent {height: 190px;
+margin-top: 20px;
+    width: 100%;
+    list-style: none;
+    }
+    
+#activityContent li:last-child{
+    margin-right: 0;
+    }
+    
+.blocContent {
+background: none repeat scroll 0 0 #505050;
+float: left;
+height: 190px;
+margin-bottom: 20px;
+margin-right: 20px;
+width: 300px;
+    }
+
+    .slide{
+color: white;
+float: left;
+height: 100%;
+padding: 20px;
+width: 939px;
+
+    }
+    
+    .slideImg{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-height: 230px;
+        width:620px;
+        float:left;
+    }
+    
+      .slideImg img{
+        max-height: 230px;
+    }
+    
+    .slideDesc {
+    float: left;
+height: 214px;
+max-height: 214px;
+min-height: 200px;
+overflow: hidden;
+padding-top: 20px;
+width: 270px;   
+    }
+
+    .slideTech {float:left;width: 318px;}
+    
+    #prevS {
+        float: left;
+height: 52px;
+left: -28px;
+position: relative;
+top: -410px;
+width: 52px;
+    cursor:pointer;}
+    
+    #nextS {
+    float: left;
+height: 52px;
+position: relative;
+right: -864px;
+top: -410px;
+width: 52px;
+cursor:pointer;
     }
