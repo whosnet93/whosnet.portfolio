@@ -11,10 +11,11 @@ noeux++;
 $("#sliderContent").append("<li class=\"slide\" id=\"slide-"+field.id+"\"  data-bg=\""+field.bg+"\" >\n\
     <h2>"+field.titre+"</h2>\n\
     <div class=\"slideImg\"><img src=\""+chemin_slides+field.img+"\" /></div>\n\
-    <div class=\"slideDesc\"><strong>Description: </strong>"+field.desc+"</div>\n\
-    <div class=\"slideTech\"><strong>Technique: </strong> "+field.tech+"</div>\n\
-</li>");
+            </li>");
 
+
+$("#sliderBottom").append("<li><div class=\"slideDesc\"><strong>Description: </strong>"+field.description+"</div>\n\
+    <div class=\"slideTech\"><strong>Technique: </strong> "+field.tech+"</div></li>");
 //
 if (i===0) {  
     $('#bgIntro').css('background','url('+chemin_bg+field.bg+') repeat center center fixed');
@@ -27,12 +28,48 @@ if (i===0) {
    
 var tailleEcran=$( window ).width();
 var tailleUL=(noeux * tailleEcran) + tailleEcran;
+var moitieEcran = $( window ).height()/2;
 
 $(".slide").css('width',tailleEcran);
+$("#sliderContent").css("width",tailleUL + "px");
+$("#sliderBottom").css("width",tailleUL + "px");
+$("#sliderWhosnet").css("height",moitieEcran + "px");
+$("#sliderBottom").css("height",moitieEcran + "px");
+
+$("#sliderBottom li").css('width',tailleEcran);
+$("#sliderBottom li").css("height",moitieEcran + "px")
+ 
+
+
+///////////////////// RESIZE
+
+$( window ).resize(function() {
     
+    calcul();
+    reposition ();
     
-      $("#sliderContent").css("width",tailleUL + "px");
-      
+});
+
+/////////////////////////////////////////////////////////////// 
+
+function reposition () { 
+    $(".slide").css('width',tailleEcran);
+    $("#sliderContent").css("width",tailleUL + "px");
+    $("#sliderBottom").css("width",tailleUL + "px");
+    $("#sliderWhosnet").css("height",moitieEcran + "px");
+    $("#sliderBottom").css("height",moitieEcran + "px");
+    $("#sliderBottom li").css('width',tailleEcran);
+    $("#sliderBottom li").css("height",moitieEcran + "px");
+}
+
+function calcul() {
+    var tailleEcran=$( window ).width();
+    var tailleUL=(noeux * tailleEcran) + tailleEcran;
+    var moitieEcran = $( window ).height()/2;
+
+    }
+
+
       
       var posAct=0;
       var maxPos=noeux-1;
@@ -52,16 +89,22 @@ mooveRight();
 
 function mooveLeft () {
     
+      calcul();
+      
+
     if ( posAct > 0) { 
     posAct--;
     var bgAct=$("#slide-"+(posAct+1)).attr("data-bg");
     var bgActFile=chemin_bg+bgAct;
     
-        $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
+    $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
     $("#sliderContent").animate({left: "+="+tailleEcran+"px"},800);
+    $("#sliderBottom").animate({left: "+="+tailleEcran+"px"},800);
     }   
     else if (posAct <= 0 ) {        
-            posAct=maxPos; $("#sliderContent").animate({left: "-"+((noeux * tailleEcran)-tailleEcran)},800); 
+            posAct=maxPos; 
+            $("#sliderContent").animate({left: "-"+((noeux * tailleEcran)-tailleEcran)},800);
+            $("#sliderBottom").animate({left: "-"+((noeux * tailleEcran)-tailleEcran)},800);
             var bgAct=$("#slide-"+(posAct+1)).attr("data-bg");
             var bgActFile=chemin_bg+bgAct;
         $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
@@ -69,6 +112,8 @@ function mooveLeft () {
 }
 
 function mooveRight () {
+    
+     calcul();
     
 
 if (posAct<maxPos) {
@@ -79,10 +124,13 @@ var bgActFile=chemin_bg+bgAct;
 
 $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
 
-        
+        sliderBottom
     $("#sliderContent").animate({left: "-="+tailleEcran+"px"},800);
+    $("#sliderBottom").animate({left: "-="+tailleEcran+"px"},800);
     } else {
-        posAct=0; $("#sliderContent").animate({left: 0},800);
+        posAct=0; 
+        $("#sliderContent").animate({left: 0},800);
+        $("#sliderBottom").animate({left: 0},800);
         var bgAct=$("#slide-"+(posAct+1)).attr("data-bg");
         var bgActFile=chemin_bg+bgAct;
         $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
@@ -111,13 +159,17 @@ $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
          </ul>
     </div>
     
+    <div id="sliderBottomContent" >
+        <ul id="sliderBottom">
+            
+        </ul>
+    </div>
     
-    
-<ul id="activityContent">
+<!--<ul id="activityContent">
     <li class="blocContent"></li>
     <li class="blocContent"></li>
     <li class="blocContent"></li>
-</ul>
+</ul>-->
     
 <img id="prevS" src="<?php echo CHEMIN_IMG; ?>prevSlide.png" />
 <img id="nextS" src="<?php echo CHEMIN_IMG; ?>nextSlide.png" />

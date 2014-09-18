@@ -32,7 +32,7 @@ define('CHEMIN_ICONS', 	CHEMIN_IMG.'icons/');
 define('CHEMIN_TOOLS',	'tools/');
 define('LESS_INC',    	'tools/lessphp/lessc.inc.php');
 define('LESS_INPUT',    CHEMIN_CSS.'less.css');
-define('LESS_OUTPUT',   CHEMIN_CSS.'test.css');
+define('LESS_OUTPUT',   CHEMIN_CSS.'styles.css');
 
 define('MAIL_ADMIN',    'regis.dome@gmail.com');
 define('MAIL_SUJET',    'Nouveau message de : ');
