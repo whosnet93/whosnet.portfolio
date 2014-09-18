@@ -14,8 +14,11 @@ $("#sliderContent").append("<li class=\"slide\" id=\"slide-"+field.id+"\"  data-
 if (i===0) {  $('#bgIntro').css('background','url(../img/bg/'+field.bg+') repeat center center fixed'); }
 
    });
+   
+   var tailleEcran=$( window ).width();
+    var tailleUL=(noeux * tailleEcran) + tailleEcran;
     
-    var tailleUL=(noeux * 940) + 940;
+    
       $("#sliderContent").css("width",tailleUL + "px");
       
       
