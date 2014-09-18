@@ -6,11 +6,13 @@
 /***************************/
 
 	////////// get json des references ///////////////////////////
-$.getJSON("./json/results.json",function(result){
+$.getJSON(json_file,function(result){
+    console.log(json_file);
     $.each(result.references, function(i, field){     
             
-            myBar.addImage("bg/"+field.bg);
-            myBar.addImage("slides/"+field.img);
+
+            myBar.addImage(chemin_bg+field.bg);
+            myBar.addImage(chemin_slides+field.img);
 
       
     });
@@ -28,7 +30,8 @@ var LoadBar = function(){
 	this.loadedImages = Array(); /* Stores all Image()-Objects */
 	
 	/* Settings */
-	this.imgPath = 'img/';
+	this.imgPath = "";
+        
 };
 
 
@@ -50,11 +53,7 @@ LoadBar.prototype.hide = function() {
              $('#bgLoading').fadeOut(1000, function () { $('#loadingZone').fadeOut(600); $('#all').fadeIn();});
          }); 
         });
-        
-
-        
-        
-    
+            
 };
  
 

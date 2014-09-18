@@ -1,6 +1,7 @@
 <?php
 // Initialisation
-include 'config/initialize.php';
+include 'config/define.php';
+include CHEMIN_CONFIG.'initialize.php';
 ob_start();
 
 if(isset($_GET['action'])) {
@@ -9,32 +10,28 @@ if(isset($_GET['action'])) {
 
 if (!empty($_GET['action'])) {
 
-	$model = dirname(__FILE__).'/controllers/';
-
 	$action = (!empty($_GET['action'])) ? $_GET['action'].'.php' : 'index.php';
 	
         
+	if (is_file(CHEMIN_CONTROLLERS.$action)) {
 
-        
-	if (is_file($model.$action)) {
-
-            include $model.$action;
+            include CHEMIN_CONTROLLERS.$action;
 
 	} else {
 
-		include 'controllers/portfolio.php';
+		include DEFAULT_CONTOLLER;
 	}
 
     } 
 
 } else {
 
-	include 'controllers/portfolio.php';
+	include DEFAULT_CONTOLLER;
 }
 
 $contenu = ob_get_clean();
-include 'config/header.php'; 
+include HEADER; 
 
 echo $contenu;
 
-include 'config/footer.php'; 
+include FOOTER; 
