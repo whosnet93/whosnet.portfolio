@@ -5,8 +5,8 @@
 </div>       
 
 <footer>
-    <img src="img/fIcon.png" class="iconFoot" />
-    <img src="img/tIcon.png" class="iconFoot" />
+    <img src="<?php echo CHEMIN_ICONS; ?>fIcon.png" class="iconFoot" />
+    <img src="<?php echo CHEMIN_ICONS; ?>tIcon.png" class="iconFoot" />
     <span class="iconFoot" >©2014 whosnet.fr </span>
 </footer>
  

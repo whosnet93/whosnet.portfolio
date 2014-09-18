@@ -2,7 +2,6 @@
 session_start();
 $PHPSESSID=session_id();
 header('Content-Type: text/html; charset=UTF-8');
-include 'config/define.php';
 
 function utilisateur_est_connecte() {
  
