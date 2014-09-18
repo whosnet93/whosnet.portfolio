@@ -5,7 +5,18 @@
 //@license: Feel free to use it, but keep this credits please!					
 /***************************/
 
+	////////// get json des references ///////////////////////////
+$.getJSON("./json/results.json",function(result){
+    $.each(result.references, function(i, field){     
+            
+            myBar.addImage("bg/"+field.bg);
+            myBar.addImage("slides/"+field.img);
 
+      
+    });
+          });
+///////////////////////////////////////////////////////////////////////////////
+      
 var LoadBar = function(){
 	this.value = 0;
 	this.sources = Array();
@@ -42,7 +53,7 @@ LoadBar.prototype.hide = function() {
         
 
         
-         $('#bgIntro').css('background','url(../img/bg/bgPaulEx.png) repeat center center fixed');
+        
     
 };
  
@@ -155,9 +166,8 @@ window.onresize = function(){
 };
 //Called on body load
 start = function(){
-            
-	
-	myBar.addImage("bg/bgPaulEx.png");
+           
+
     
 	myBar.run();
 };
