@@ -2,7 +2,7 @@
 [SQL]
 host = 127.0.0.1
 user = whosnet
-pass = '#uvc1024tem3acx!'
+password = '#uvc1024tem3acx!'
 dbname = wn_portfolio
 
 

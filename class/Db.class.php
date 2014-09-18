@@ -29,7 +29,7 @@ class DB
 	private $parameters;
 	
 
-	*   Default Constructor 
+	/*   Default Constructor 
 	*
 	*	1. Instantiate Log class.
 	*	2. Connect to database.

@@ -16,3 +16,10 @@ error_reporting(E_ALL ^ E_NOTICE);
 error_reporting(E_ALL);
 error_reporting(-1);
 ini_set('error_reporting', E_ALL);
+
+
+// less
+require LESS_INC;
+$less = new lessc;
+// compile less file only if is updated
+$less->checkedCompile(LESS_INPUT, LESS_OUTPUT);
