@@ -14,7 +14,7 @@
 ######### this .gitignore ####################
 *.swp
 *.sublime*
-nbproject/private/
+nbproject/*
 *.massi
 logs/*
 !logs/.gitkeep
