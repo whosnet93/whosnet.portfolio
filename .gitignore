@@ -18,3 +18,5 @@ nbproject/private/
 *.massi
 logs/*
 !logs/.gitkeep
+json/*
+!json/model.json
