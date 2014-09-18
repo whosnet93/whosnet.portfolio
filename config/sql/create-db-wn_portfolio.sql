@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS `wn_portfolio`.`cadres` ;
 CREATE TABLE IF NOT EXISTS `wn_portfolio`.`cadres` (
   `id` INT UNSIGNED ZEROFILL NOT NULL,
   `titre` VARCHAR(100) NOT NULL,
-  `desc` TEXT NULL,
+  `description` TEXT NULL,
   `type` ENUM('references','autres') NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -35,8 +35,10 @@ CREATE TABLE IF NOT EXISTS `wn_portfolio`.`references` (
   `img` VARCHAR(100) NOT NULL,
   `url` VARCHAR(100) NOT NULL,
   `tech` TEXT NULL,
+  `position` INT NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  UNIQUE INDEX `bg_UNIQUE` (`bg` ASC),
   CONSTRAINT `fk_references_cadres`
     FOREIGN KEY (`id`)
     REFERENCES `wn_portfolio`.`cadres` (`id`)
