@@ -27,12 +27,13 @@ ini_set('error_reporting', E_ALL);
 // prepare less variables
 $fp = fopen(INCLUDE_LESS, 'w');
 
-$less_vars =   "@path_img: '".CHEMIN_IMG."';\r\n
-				@path_slides: '".CHEMIN_SLIDES."';\r\n
-				@path_bg: '".CHEMIN_BG."';\r\n
-				@path_icons: '".CHEMIN_ICONS."';\r\n
-				@path_logos: '".CHEMIN_LOGOS."';\r\n
-				@path_liens: '".CHEMIN_LIENS."';\r\n";
+$less_vars = 
+"@path_img: '".CHEMIN_IMG."';
+@path_slides: '".CHEMIN_SLIDES."';
+@path_bg: '".CHEMIN_BG."';
+@path_icons: '".CHEMIN_ICONS."';
+@path_logos: '".CHEMIN_LOGOS."';
+@path_liens: '".CHEMIN_LIENS."';";
 
 fwrite($fp, $less_vars, strlen($less_vars));
 fclose($fp);
