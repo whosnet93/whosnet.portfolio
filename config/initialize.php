@@ -22,20 +22,10 @@ error_reporting(-1);
 ini_set('error_reporting', E_ALL);
 
 
-
 /* LESS */
 // prepare less variables
 $fp = fopen(INCLUDE_LESS, 'w');
-
-$less_vars = 
-"@path_img: '".CHEMIN_IMG."';
-@path_slides: '".CHEMIN_SLIDES."';
-@path_bg: '".CHEMIN_BG."';
-@path_icons: '".CHEMIN_ICONS."';
-@path_logos: '".CHEMIN_LOGOS."';
-@path_liens: '".CHEMIN_LIENS."';";
-
-fwrite($fp, $less_vars, strlen($less_vars));
+fwrite($fp, $GLOBALS['less_vars'], strlen($GLOBALS['less_vars']));
 fclose($fp);
 
 // initialise less

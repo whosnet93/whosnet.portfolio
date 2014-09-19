@@ -41,6 +41,14 @@ define('LESS_INC',    	'tools/lessphp/lessc.inc.php');
 define('LESS_INPUT',    CHEMIN_CSS.'style.less');
 define('LESS_OUTPUT',   CHEMIN_CSS.'noedit.css');
 define('INCLUDE_LESS',	CHEMIN_CSS.'include.less');
+// less variables from define.php
+$GLOBALS['less_vars'] = 
+"@path_img: '".CHEMIN_IMG."';
+@path_slides: '".CHEMIN_SLIDES."';
+@path_bg: '".CHEMIN_BG."';
+@path_icons: '".CHEMIN_ICONS."';
+@path_logos: '".CHEMIN_LOGOS."';
+@path_liens: '".CHEMIN_LIENS."';";
 
 // ADRESSES MAIL
 define('MAIL_ADMIN',    'regis.dome@gmail.com');
