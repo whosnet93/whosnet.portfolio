@@ -36,27 +36,31 @@ $("#sliderBottom").css("width",tailleUL + "px");
 $("#sliderWhosnet").css("height",moitieEcran + "px");
 $("#sliderBottom").css("height",moitieEcran + "px");
 
-$("#sliderBottom li").css('width',tailleEcran);
+$("#sliderBottom li").css('width',tailleEcran + "px");
 $("#sliderBottom li").css("height",moitieEcran + "px")
  
  
 
+  var tailleEcran=$( window ).width();
+    var defTailleEcran=$( window ).width();
+    var tailleUL=(noeux * tailleEcran) + tailleEcran;
+    var moitieEcran = $( window ).height()/2;
+    ////////////////////////////////
 
 ///////////////////// RESIZE
 
 $( window ).resize(function() {
     
     calcul();
-   
     reposition ();
-    console.log(moitieEcran);
+    
 });
 
 /////////////////////////////////////////////////////////////// 
-var tailleEcran=$( window ).width();
-    var tailleUL=(noeux * tailleEcran) + tailleEcran;
-    var moitieEcran = $( window ).height()/2;
-
+  function pxToNumber (px) { 
+       nombre = px.slice(0,-2);
+       return parseInt(nombre);
+    }
 
 function reposition () { 
     $(".slide").css('width',tailleEcran);
@@ -64,8 +68,18 @@ function reposition () {
     $("#sliderBottom").css("width",tailleUL + "px");
     $("#sliderWhosnet").css("height",moitieEcran + "px");
     $("#sliderBottom").css("height",moitieEcran + "px");
-    $("#sliderBottom li").css('width',tailleEcran);
+    $("#sliderBottom li").css('width',tailleEcran  + "px");
     $("#sliderBottom li").css("height",moitieEcran + "px"); 
+    
+    var actualPosUL = pxToNumber($("#sliderContent").css('left'));
+    
+    var diffTailleEcran = defTailleEcran - tailleEcran;
+
+    
+    var newPosUL = (tailleEcran*posAct)+(42*(posAct));
+    if (posAct!==0) { $("#sliderContent").css('left',"-"+newPosUL+"px"); }
+    
+
     
 }
 
@@ -104,13 +118,13 @@ function mooveLeft () {
     var bgActFile=chemin_bg+bgAct;
     
     $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
-    $("#sliderContent").animate({left: "+="+tailleEcran+"px"},800);
-    $("#sliderBottom").animate({left: "+="+tailleEcran+"px"},800);
+    $("#sliderContent").animate({left: "+="+(tailleEcran)+"px"},800);
+    $("#sliderBottom").animate({left: "+="+(tailleEcran)+"px"},800);
     }   
     else if (posAct <= 0 ) {        
             posAct=maxPos; 
-            $("#sliderContent").animate({left: "-"+((noeux * tailleEcran)-tailleEcran)},800);
-            $("#sliderBottom").animate({left: "-"+((noeux * tailleEcran)-tailleEcran)},800);
+            $("#sliderContent").animate({left: "-"+((noeux * tailleEcran)-(tailleEcran))},800);
+            $("#sliderBottom").animate({left: "-"+((noeux * tailleEcran)-(tailleEcran))},800);
             var bgAct=$("#slide-"+(posAct+1)).attr("data-bg");
             var bgActFile=chemin_bg+bgAct;
         $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
@@ -130,9 +144,9 @@ var bgActFile=chemin_bg+bgAct;
 
 $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
 
-        sliderBottom
-    $("#sliderContent").animate({left: "-="+(tailleEcran+40)+"px"},800);
-    $("#sliderBottom").animate({left: "-="+(tailleEcran+40)+"px"},800);
+        
+    $("#sliderContent").animate({left: "-="+(tailleEcran+42)+"px"},800);
+    $("#sliderBottom").animate({left: "-="+(tailleEcran+42)+"px"},800);
     } else {
         posAct=0; 
         $("#sliderContent").animate({left: 0},800);
