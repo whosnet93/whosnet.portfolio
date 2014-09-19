@@ -39,6 +39,7 @@ $("#sliderBottom").css("height",moitieEcran + "px");
 $("#sliderBottom li").css('width',tailleEcran);
 $("#sliderBottom li").css("height",moitieEcran + "px")
  
+ 
 
 
 ///////////////////// RESIZE
@@ -46,11 +47,16 @@ $("#sliderBottom li").css("height",moitieEcran + "px")
 $( window ).resize(function() {
     
     calcul();
+   
     reposition ();
-    
+    console.log(moitieEcran);
 });
 
 /////////////////////////////////////////////////////////////// 
+var tailleEcran=$( window ).width();
+    var tailleUL=(noeux * tailleEcran) + tailleEcran;
+    var moitieEcran = $( window ).height()/2;
+
 
 function reposition () { 
     $(".slide").css('width',tailleEcran);
@@ -59,14 +65,14 @@ function reposition () {
     $("#sliderWhosnet").css("height",moitieEcran + "px");
     $("#sliderBottom").css("height",moitieEcran + "px");
     $("#sliderBottom li").css('width',tailleEcran);
-    $("#sliderBottom li").css("height",moitieEcran + "px");
+    $("#sliderBottom li").css("height",moitieEcran + "px"); 
+    
 }
 
 function calcul() {
-    var tailleEcran=$( window ).width();
-    var tailleUL=(noeux * tailleEcran) + tailleEcran;
-    var moitieEcran = $( window ).height()/2;
-
+    tailleEcran=$( window ).width();
+    tailleUL=(noeux * tailleEcran) + tailleEcran;
+    moitieEcran = $( window ).height()/2;    
     }
 
 
@@ -125,8 +131,8 @@ var bgActFile=chemin_bg+bgAct;
 $('#bgIntro').css('background','url('+bgActFile+') repeat center center fixed');
 
         sliderBottom
-    $("#sliderContent").animate({left: "-="+tailleEcran+"px"},800);
-    $("#sliderBottom").animate({left: "-="+tailleEcran+"px"},800);
+    $("#sliderContent").animate({left: "-="+(tailleEcran+40)+"px"},800);
+    $("#sliderBottom").animate({left: "-="+(tailleEcran+40)+"px"},800);
     } else {
         posAct=0; 
         $("#sliderContent").animate({left: 0},800);
