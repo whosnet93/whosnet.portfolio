@@ -52,7 +52,7 @@ $("#sliderWhosnet").css("height",moitieEcran + "px");
 $("#sliderBottom").css("height",moitieEcran + "px");
 
 $("#sliderBottom li").css('width',tailleEcran + "px");
-$("#sliderBottom li").css("height",moitieEcran + "px")
+$("#sliderBottom li").css("height",moitieEcran + "px");
  
  $(".slideImg img").css("max-height",(moitieEcran-20) + "px");
 
