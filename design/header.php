@@ -17,7 +17,7 @@ ___  ___      _   _     _                      _               _          _
 <head>
 <meta charset="UTF-8">
 <title></title>
-<link rel="stylesheet" type="text/css" href="<?php echo CHEMIN_CSS ?>styles.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo CHEMIN_CSS ?>noedit.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <script src="http://code.jquery.com/jquery-latest.min.js"  type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.js"></script>
