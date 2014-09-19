@@ -16,10 +16,10 @@ define('DEFAULT_CONTOLLER', CHEMIN_CONTROLLERS.'portfolio.php');
 
 define('CHEMIN_DESIGN',    'design/');
 define('CHEMIN_TEMPLATES', 'design/templates/');
-define('HEADER', CHEMIN_DESIGN.'header.php');
-define('FOOTER', CHEMIN_DESIGN.'footer.php');
+define('HEADER', 			CHEMIN_DESIGN.'header.php');
+define('FOOTER', 			CHEMIN_DESIGN.'footer.php');
 
-define('CHEMIN_JS',	'design/js/');
+define('CHEMIN_JS',		'design/js/');
 define('CHEMIN_CSS',	'design/css/');
 define('CHEMIN_IMG',	'design/img/');
 
@@ -31,7 +31,7 @@ define('CHEMIN_ICONS', 	CHEMIN_IMG.'icons/');
 
 define('CHEMIN_TOOLS',	'tools/');
 define('LESS_INC',    	'tools/lessphp/lessc.inc.php');
-define('LESS_INPUT',    CHEMIN_CSS.'style.less');
+define('LESS_INPUT',    CHEMIN_CSS.'less.css');
 define('LESS_OUTPUT',   CHEMIN_CSS.'noedit.css');
 
 define('MAIL_ADMIN',    'regis.dome@gmail.com');
