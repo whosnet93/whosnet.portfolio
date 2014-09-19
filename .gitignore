@@ -22,3 +22,6 @@ json/*
 !json/model.json
 !json/.gitkeep
 design/css/noedit.css
+design/css/include.less
+scripts/*
+!scripts/.gitkeep
