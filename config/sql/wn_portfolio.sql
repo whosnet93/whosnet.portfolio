@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 19 Septembre 2014 à 16:46
+-- Généré le: Ven 19 Septembre 2014 à 17:35
 -- Version du serveur: 5.5.39-log
 -- Version de PHP: 5.4.32-pl0-gentoo
 
@@ -29,6 +29,8 @@ USE `wn_portfolio`;
 
 --
 -- Structure de la table `autres`
+--
+-- Création: Jeu 18 Septembre 2014 à 10:36
 --
 
 DROP TABLE IF EXISTS `autres`;
@@ -57,6 +59,8 @@ INSERT INTO `autres` (`id`, `logo`) VALUES
 
 --
 -- Structure de la table `cadres`
+--
+-- Création: Jeu 18 Septembre 2014 à 10:36
 --
 
 DROP TABLE IF EXISTS `cadres`;
@@ -90,6 +94,8 @@ INSERT INTO `cadres` (`id`, `titre`, `description`, `type`) VALUES
 
 --
 -- Structure de la table `references`
+--
+-- Création: Jeu 18 Septembre 2014 à 10:36
 --
 
 DROP TABLE IF EXISTS `references`;
@@ -125,6 +131,8 @@ INSERT INTO `references` (`id`, `sousTitre`, `bg`, `img`, `url`, `tech`, `positi
 
 --
 -- Structure de la table `reseaux-sociaux`
+--
+-- Création: Jeu 18 Septembre 2014 à 10:36
 --
 
 DROP TABLE IF EXISTS `reseaux-sociaux`;
